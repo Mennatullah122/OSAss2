@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<unistd.h>
+First question
+int main(){ //here we inialize the main function(int to return integer) 
+pid_t pid = fork(); //fork() system call use to create a process from a parent one 
+if(pid==0){ //condition if the process id ==0 then this is the child process 
+printf("This is the child process. PID: %d\n",getpid());
+}else if( pid > 0){ //condition if the process id>0 then this is the parent process
+printf("This is the parent process. PID:%d\n",getpid());
+}else{
+printf("Fork faild!\n"); // if it is negative number then fork() faild to create a process
+}
+return 0;
+}
+This code demonestrates process creation using the fork() system call  
+________________________________________________________________________________
+#include<stdio.h> // initialize used library 
+void hello(){ // inialize hello fun that return the statment hello from file one
+printf("Hello from file1!\n");
+}
+________________________________________________________________________________
+void hello();
+int main(){
+hello();
+return 0; // this code use the hello function inialized on the file1.c 
+}
+These to file are linked by the command gcc file1.c file2.c -o output_program 
+./output_program
+________________________________________________________________________________                                                  
+#include<stdio.h>
+int main(){
+printf("This is a simple program.\n");
+return 0;
+}
+//this code helps to make a simple program that display the statment This is a simple program 
+//lld simple program used to display the library used on the code by it's link 
+___________________________________________________________________________________
+sleep 300& sleep the process for 300 sec & make it on the background 
+stop the process by kill
+resume a process by kill -CONT (id of the process) 
+pause a process by kill -STOP (id of the process)
+__________________________________________________________________________________
+Second question 
+The linker:his role stands on link all the different parts of the program to make one excutable file 
+1- link all .o files that the compiler make from the .c files 
+2- resolve the external refrances like the libraries used on the program
+__________________________________________________________________________________
+Third question
+The loader:is a part of the os specially a part of the kernal 
+1-he loads the code to the RAM to start excute 
+2-he define the location for the libraries used on the program 
+3-he playes as a memory allocation 
+
