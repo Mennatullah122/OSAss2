@@ -1,6 +1,8 @@
 # Assignment2 Operating System 
 This Assignment Covers an explaination of lab_5 code and .c files of the examples coverd on the same lab 
 ,also the makefile to easily compile and update the code
+The picture of the compiling code is on the "photo" file
+The license is on the ReadMe file
 
 ## Installation 
 use gcc installed by:
