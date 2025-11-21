@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<unistd.h>
-First question
+                             First question
 int main(){ //here we inialize the main function(int to return integer) 
 pid_t pid = fork(); //fork() system call use to create a process from a parent one 
 if(pid==0){ //condition if the process id ==0 then this is the child process 
